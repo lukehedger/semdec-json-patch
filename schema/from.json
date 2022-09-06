@@ -1,0 +1,25 @@
+{
+  "title": "Notification",
+  "description": "A notification from a service",
+  "type": "object",
+  "properties": {
+    "notificationId": {
+      "description": "The unique identifier for a notification",
+      "type": "string"
+    },
+    "timestamp": {
+      "description": "The notification timestamp",
+      "type": "string"
+    },
+    "externalId": {
+      "description": "A 3rd party identifier",
+      "type": "string"
+    },
+    "message": {
+      "description": "The notification message",
+      "type": "string"
+    }
+  },
+  "required": ["notificationId"],
+  "additionalProperties": false
+}

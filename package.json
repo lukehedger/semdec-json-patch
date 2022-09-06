@@ -1,0 +1,14 @@
+{
+  "name": "semdec-json-patch",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "patch": "node --experimental-specifier-resolution=node patch.js"
+  },
+  "dependencies": {
+    "ajv": "8.11.0",
+    "json-joy": "1.18.1"
+  }
+}

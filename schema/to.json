@@ -1,0 +1,35 @@
+{
+  "title": "Event",
+  "description": "An event from a producer",
+  "type": "object",
+  "properties": {
+    "eventId": {
+      "description": "The unique identifier for a event",
+      "type": "string"
+    },
+    "notificationId": {
+      "description": "The original identifier for a notification",
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "externalId": {
+          "description": "A 3rd party identifier",
+          "type": "string"
+        }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "description": "The event message",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": ["eventId", "notificationId"],
+  "additionalProperties": false
+}
