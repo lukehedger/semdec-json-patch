@@ -1,7 +1,0 @@
-[
-  { "op": "add", "path": "/eventId", "value": "456" },
-  { "op": "replace", "path": "/notificationId", "value": "notification-123" },
-  { "op": "copy", "from": "/externalId", "path": "/metadata/externalId" },
-  { "op": "remove", "path": "/externalId" },
-  { "op": "move", "from": "/message", "path": "/payload/message" }
-]

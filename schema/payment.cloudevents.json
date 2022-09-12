@@ -1,0 +1,60 @@
+{
+  "title": "Event",
+  "description": "An event from a producer",
+  "type": "object",
+  "properties": {
+    "data": {
+      "description": "The event payload",
+      "type": "object",
+      "properties": {
+        "countryCode": {
+          "description": "The country code attached to a payment request",
+          "type": "string"
+        },
+        "paymentId": {
+          "description": "Identifies the payment request",
+          "type": "string"
+        }
+      }
+    },
+    "datacontenttype": {
+      "description": "Content type of data value",
+      "type": "string"
+    },
+    "id": {
+      "description": "Identifies the event",
+      "type": "string"
+    },
+    "source": {
+      "description": "Identifies the context in which an event happened",
+      "type": "string"
+    },
+    "specversion": {
+      "description": "The version of the CloudEvents specification which the event uses",
+      "type": "string"
+    },
+    "subject": {
+      "description": "Describes the subject of the event in the context of the event producer",
+      "type": "string"
+    },
+    "time": {
+      "description": "Timestamp of when the occurrence happened",
+      "type": "string"
+    },
+    "type": {
+      "description": "Describes the type of event related to the originating occurrence",
+      "type": "string"
+    }
+  },
+  "required": [
+    "data",
+    "datacontenttype",
+    "id",
+    "source",
+    "specversion",
+    "subject",
+    "time",
+    "type"
+  ],
+  "additionalProperties": false
+}

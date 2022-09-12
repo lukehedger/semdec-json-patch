@@ -1,0 +1,13 @@
+[
+  { "op": "add", "path": "/data", "value": {} },
+  { "op": "move", "from": "/countryCodee", "path": "/data/countryCodee" },
+  { "op": "move", "from": "/paymentId", "path": "/data/paymentId" },
+  { "op": "add", "path": "/datacontenttype", "value": "application/json" },
+  { "op": "add", "path": "/id", "value": "789" },
+  { "op": "add", "path": "/source", "value": "/brickbank/public" },
+  { "op": "add", "path": "/specversion", "value": "1.0" },
+  { "op": "add", "path": "/subject", "value": "PaymentAuthorised" },
+  { "op": "add", "path": "/type", "value": "com.example.payment" },
+  { "op": "replace", "path": "/time", "value": "1662975800101" },
+  { "op": "remove", "path": "/clientId" }
+]

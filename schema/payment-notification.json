@@ -1,0 +1,25 @@
+{
+  "title": "Payment Notification",
+  "description": "A payment authorisation notification",
+  "type": "object",
+  "properties": {
+    "clientId": {
+      "description": "Identifies the payment request source",
+      "type": "string"
+    },
+    "countryCode": {
+      "description": "The country code attached to a payment request",
+      "type": "string"
+    },
+    "paymentId": {
+      "description": "Identifies the payment request",
+      "type": "string"
+    },
+    "time": {
+      "description": "The payment authorisation timestamp",
+      "type": "string"
+    }
+  },
+  "required": ["clientId", "countryCode", "paymentId", "time"],
+  "additionalProperties": false
+}
