@@ -1,6 +1,6 @@
 import Ajv from "ajv";
 import { applyPatch } from "json-joy/es6/json-patch";
-import { nanoid } from "nanoid";
+import { ulid } from "ulid";
 
 import paymentCloudEvents from "./schema/payment.cloudevents.json" assert { type: "json" };
 import paymentPatch from "./patch/payment.patch.json" assert { type: "json" };
@@ -10,7 +10,7 @@ const ajv = new Ajv();
 
 const { doc: event } = applyPatch(paymentNotification, paymentPatch, false);
 
-event.id = nanoid(10);
+event.id = ulid();
 
 event.time = new Date().toISOString();
 
