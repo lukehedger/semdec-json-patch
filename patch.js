@@ -1,6 +1,7 @@
 import Ajv from "ajv";
 import { applyPatch } from "json-joy/es6/json-patch";
 import { ulid } from "ulid";
+import crypto from "crypto";
 
 import paymentCloudEvents from "./schema/payment.cloudevents.json" assert { type: "json" };
 import paymentPatch from "./patch/payment.patch.json" assert { type: "json" };
@@ -9,6 +10,11 @@ import paymentNotification from "./data/payment-notification.json" assert { type
 const ajv = new Ajv();
 
 const { doc: event } = applyPatch(paymentNotification, paymentPatch, false);
+
+event.idempotencykey = crypto
+  .createHash("md5")
+  .update(JSON.stringify(event))
+  .digest("hex");
 
 event.id = ulid();
 

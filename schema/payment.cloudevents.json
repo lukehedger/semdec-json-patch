@@ -25,6 +25,10 @@
       "description": "Identifies the event",
       "type": "string"
     },
+    "idempotencykey": {
+      "description": "Identifies the event message",
+      "type": "string"
+    },
     "source": {
       "description": "Identifies the context in which an event happened",
       "type": "string"
